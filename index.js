@@ -1,9 +1,13 @@
+// this requires/calls inquirer
 const inquirer = require('inquirer');
+// this requires the generateMarkdonw in ifle
+const generateMarkdown = require('./utils/generateMarkdown.js')
+console.log(generateMarkdown);
+// this requires/calls file system
 const fs = require('fs')
 
 // array of questions for user
 const questions = [
-
     {
         type: 'input',
         name: 'title',
@@ -22,12 +26,12 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the installation instructions?',
+        message: 'What are the required installations for this application?',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'What is the usage information?',
+        message: 'What are the usage instructions?',
     },
     {
         type: 'list',
@@ -52,21 +56,14 @@ const questions = [
     },
 ];
 
-inquirer
-    .prompt(questions)
-
-console.log(questions)
-
-
-
-
-
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(readmeDemo.md, data) {
 }
 
 // function to initialize program
 function init() {
+    // initiates questions object prompt
+    inquirer.prompt(questions)
 
 }
 
