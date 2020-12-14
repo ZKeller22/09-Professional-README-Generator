@@ -8,55 +8,55 @@ const fs = require('fs')
 const questions = [
     {
         type: 'input',
-        name: 'title',
+        name: 'Title',
         message: 'Please provide the title of your project?',
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'Description',
         message: 'Please provide a description of your project?',
     },
     {
         type: 'checkbox',
-        name: 'contents',
+        name: 'Contents',
         choices: ['Title', 'Description', 'Table of Contents', 'Installations', 'Usage', 'License', 'Contributors', 'Testing', 'GitHub Repo', 'Email for question inquiries'],
         message: 'Please select the bullet points you would like to include in the Table of Contents?',
         
     },
     {
         type: 'input',
-        name: 'installation',
+        name: 'Installation',
         message: 'Please providehe required installations for this application?',
     },
     {
         type: 'input',
-        name: 'usage',
+        name: 'Usage',
         message: 'Please provide the usage instructions?',
     },
     {
         type: 'list',
-        name: 'license',
+        name: 'License',
         choices: ['Apache License 2.0', ' MIT License', 'Eclipse Public License 2.0', 'Mozilla Public License 2.0'],
         message: 'Select the type of licese.',
     },
     {
         type: 'input',
-        name: 'contributors',
+        name: 'Contributors',
         message: 'Please provide the application contributing members.'
     },
     {
         type: 'input',
-        name: 'test',
+        name: 'Test',
         message: 'Please provide testing instructions for this application.'
     },
     {
         type: 'input',
-        name: 'github',
+        name: 'Github',
         message: 'Please provide your GitHub profile link. '
     },
     {
         type: 'input',
-        name:'email',
+        name:'Email',
         message: 'Please provide your email for inquiries regarding your application.'
     }
 ];
@@ -66,7 +66,7 @@ function writeToFile(fileName, data) {
     if(err){
         return console.log(err)
     }
-    return fs.writeFileSync(fileName, data)
+    return fs.writeToFile(fileName, data)
 }
 
 // function to initialize program
