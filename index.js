@@ -52,12 +52,19 @@ const questions = [
     {
         type: 'input',
         name: 'Github',
-        message: 'Please provide your GitHub profile link. '
+        message: 'Please provide your GitHub profile link.',
+        validate: function(input){
+            return true    
+        }
     },
     {
         type: 'input',
         name:'Email',
-        message: 'Please provide your email for inquiries regarding your application.'
+        message: 'Please provide your email for inquiries regarding your application.',
+        validate: function(input){
+            return true    
+        }
+    
     }
 ];
 
