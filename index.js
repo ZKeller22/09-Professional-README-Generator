@@ -2,36 +2,36 @@
 const inquirer = require('inquirer');
 // this requires the generateMarkdonw in ifle
 const generateMarkdown = require('./utils/generateMarkdown.js')
-console.log(generateMarkdown);
 // this requires/calls file system
 const fs = require('fs')
-
 // array of questions for user
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?',
+        message: 'Please provide the title of your project?',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'What is your projects description?',
+        message: 'Please provide a description of your project?',
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'contents',
-        message: 'What are bullets in the table of contents?',
+        choices: ['Title', 'Description', 'Table of Contents', 'Installations', 'Usage', 'License', 'Contributors', 'Testing', 'GitHub Repo', 'Email for question inquiries'],
+        message: 'Please select the bullet points you would like to include in the Table of Contents?',
+        
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the required installations for this application?',
+        message: 'Please providehe required installations for this application?',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'What are the usage instructions?',
+        message: 'Please provide the usage instructions?',
     },
     {
         type: 'list',
@@ -47,24 +47,38 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'provide testing instructions.'
+        message: 'Please provide testing instructions for this application.'
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Provide your GitHub username and email address.'
+        name: 'github',
+        message: 'Please provide your GitHub profile link. '
     },
+    {
+        type: 'input',
+        name:'email',
+        message: 'Please provide your email for inquiries regarding your application.'
+    }
 ];
 
 // function to write README file
-function writeToFile(readmeDemo.md, data) {
+function writeToFile(fileName, data) {
+    if(err){
+        return console.log(err)
+    }
+    return fs.writeFileSync(fileName, data)
 }
 
 // function to initialize program
 function init() {
     // initiates questions object prompt
     inquirer.prompt(questions)
-
+    // writes file to READMEGENERATED.md using data from generateMarkdown
+    .then((data) => fs.writeFileSync('READMEGENERATED.md', generateMarkdown(data)))
+    // once printed w/o erros succesful comand  is printed
+    .then(() => console.log("README successfully written."))
+    // this will print any erros in the command line, if any.
+    .catch((err) => console.log(err));
 }
 
 // function call to initialize program
