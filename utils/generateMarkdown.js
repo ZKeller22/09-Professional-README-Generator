@@ -4,10 +4,10 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   * [Description](#Description)
-  * [Installation](#Installation)
-  * [Usage Instructions](#UsageInstructions)
+  * [Installation](#Installation-Instructions)
+  * [Usage Instructions](#Usage-Instructions)
   * [License](#License)
-  * [Contributing Members](#ContributingMembers)
+  * [Contributing Members](#Contributing-Members)
   * [Testing](#Testing)    
   * [Questions/Inquiries](#Questions/Inquiries)
 
@@ -37,7 +37,6 @@ function generateMarkdown(data) {
 
   ### Email
   ${data.Email}
-
 `;
 }
 module.exports = generateMarkdown;

@@ -26,7 +26,7 @@ const questions = [
     {
         type: 'input',
         name: 'Installation',
-        message: 'Please providehe required installations for this application?',
+        message: 'Please provide required installations for this application?',
     },
     {
         type: 'input',
