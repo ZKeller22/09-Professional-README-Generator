@@ -53,18 +53,11 @@ const questions = [
         type: 'input',
         name: 'Github',
         message: 'Please provide your GitHub profile link.',
-        validate: function(input){
-            return true    
-        }
     },
     {
         type: 'input',
         name:'Email',
-        message: 'Please provide your email for inquiries regarding your application.',
-        validate: function(input){
-            return true    
-        }
-    
+        message: 'Please provide your email for inquiries regarding your application.',  
     }
 ];
 
@@ -73,8 +66,10 @@ function writeToFile(fileName, data) {
     if(err){
         return console.log(err)
     }
+
     return fs.writeToFile(fileName, data)
 }
+
 
 // function to initialize program
 function init() {
@@ -85,7 +80,7 @@ function init() {
     // once printed w/o erros succesful comand  is printed
     .then(() => console.log("README successfully written."))
     // this will print any erros in the command line, if any.
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err))
 }
 
 // function call to initialize program

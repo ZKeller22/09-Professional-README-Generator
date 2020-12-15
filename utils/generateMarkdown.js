@@ -6,16 +6,16 @@ function generateMarkdown(data) {
     ${data.Description}
 
   ## Table of Contents
-  *${name.Title}
-  *${name.Description}
-  *${name.Contents}
-  *${name.installation}
-  *${name.Usage}
-  *${name.License}     
-  *${name.Contributors}
-  *${name.Test}
-  *${name.GitHub}
-  *${name.Email}
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}     
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}
+  * ${data.name}
 
   ## Installation Instructions 
   ${data.Installation}
@@ -35,10 +35,10 @@ function generateMarkdown(data) {
   ## Questions/Inquiries 
 
   # GitHub Profile
-    ${github.com/github}
+    ${data.Github}
 
   # Email
-    ${data.email}
+    ${data.Email}
 
 `;
 }
