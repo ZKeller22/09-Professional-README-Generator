@@ -21,7 +21,7 @@ const questions = [
         name: 'Contents',
         choices: ['Title', 'Description', 'Table of Contents', 'Installations', 'Usage', 'License', 'Contributors', 'Testing', 'GitHub Repo', 'Email for question inquiries'],
         message: 'Please select the bullet points you would like to include in the Table of Contents?',
-        
+
     },
     {
         type: 'input',
@@ -56,31 +56,27 @@ const questions = [
     },
     {
         type: 'input',
-        name:'Email',
-        message: 'Please provide your email for inquiries regarding your application.',  
+        name: 'Email',
+        message: 'Please provide your email for inquiries regarding your application.',
     }
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-    if(err){
-        return console.log(err)
-    }
-
-    return fs.writeToFile(fileName, data)
+// 
+    return fs.writeFileSync(path.join(proccess.cwd(),fileName), data)
 }
-
 
 // function to initialize program
 function init() {
     // initiates questions object prompt
     inquirer.prompt(questions)
-    // writes file to READMEGENERATED.md using data from generateMarkdown
-    .then((data) => fs.writeFileSync('READMEGENERATED.md', generateMarkdown(data)))
-    // once printed w/o erros succesful comand  is printed
-    .then(() => console.log("README successfully written."))
-    // this will print any erros in the command line, if any.
-    .catch((err) => console.log(err))
+        // writes file to READMEGENERATED.md using data from generateMarkdown
+        .then((data) => writeToFile('READMEGENERATED.md', generateMarkdown(data)))
+        // once printed w/o erros succesful comand  is printed
+        .then(() => console.log("README successfully written."))
+        // this will print any erros in the command line, if any.
+        .catch((err) => console.log(err))
 }
 
 // function call to initialize program
