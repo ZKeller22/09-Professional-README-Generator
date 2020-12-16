@@ -41,7 +41,7 @@ Janneth Alvarado Verduzco - janneth_verduzco@live.com
 ### Prompt Walkthrough
 ![GitHub Logo](Images/last-questions.PNG)
 
-### Succesful wWitten Readme
+### Successful Written Readme
 ![GitHub Logo](Images/readme-generated.PNG)
 
 
