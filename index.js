@@ -63,7 +63,7 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-// returns the current working directory by  joining all given path segments together
+
     return fs.writeFileSync(fileName, data)
 }
 
