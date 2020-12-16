@@ -17,7 +17,7 @@
   The user must install iquirer to be able to run this application
 
   ## Usage Instructions
-  1) download inquiere 2) Follow prompt questions and be sure to fill them in accordingly 3)The review your generate readme.
+  1)download inquiere 2) Follow prompt questions and be sure to fill them in accordingly 3)The review your generate readme.
 
   ## License
    MIT License
