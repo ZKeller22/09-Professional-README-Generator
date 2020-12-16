@@ -45,8 +45,6 @@ Janneth Alvarado Verduzco - janneth_verduzco@live.com
 ![GitHub Logo](Images/readme-generated.PNG)
 
 
-
-
 ## Repository Link
 https://github.com/jannverduzco/09-Node.js-Homework-Professional-README-Generator
 
